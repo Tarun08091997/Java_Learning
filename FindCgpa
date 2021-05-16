@@ -1,0 +1,22 @@
+// Find CGPA of 3 Subjects
+//@TarunKumar
+/*TODO 1. import Scanner and create class
+ * 2. Scan total numbers to add them in 'sum' variable and scan them too
+ * 3. find CGPA and print & Stop Scanner
+ */
+
+import java.util.Scanner;
+
+public class FindCgpa {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+	    float sum = 0;
+	  for(int i=0;i<3;i++) {
+		  System.out.println("Give the marks obtained");
+		  sum=sum + sc.nextFloat();
+	  }
+		sc.close();
+		System.out.println("CGPA is -> "+ sum/30);
+	}
+          
+}
