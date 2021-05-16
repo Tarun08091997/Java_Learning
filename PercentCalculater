@@ -1,0 +1,27 @@
+//CBSE Percentage calculator
+//@autherTarun_Kumar
+
+/*TODO
+ * 1. import Scanner class,create its object
+ * 2. create int variable and add all scannend number in it
+ * 3.Find percentage and print it
+ */
+
+import java.util.Scanner;
+
+public class PercentCalculater {
+	
+	public static void main(String[] args) {
+		 float sum = 0;
+		 Scanner sc = new Scanner(System.in);
+		 System.out.println("Highest marks in a subject");
+		 float hm = sc.nextFloat();
+		for(int i =1;i<=5;i++) {
+		 System.out.println("Number in subject "+i);
+		 sum =sum + sc.nextFloat();
+		}
+	    sc.close();
+		System.out.println("Percentage of all subject is - "+(sum*100)/(5*hm) + "%");
+	}
+
+}
