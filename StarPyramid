@@ -1,0 +1,16 @@
+// Create a pyramid of stars
+//@authorTarun_Kumar
+
+public class StarPyramid {
+
+	public static void main(String[] args) {
+		int j=0;
+       for(int i=10;i>=0;i--) {
+    	   for(j=0;j<=i;j++) {
+    		   System.out.print(" ");}
+    	   for(int s=j;s<=10;s++) {
+		System.out.print("* ");}
+    	   System.out.print("\n");
+	}
+	}
+}
