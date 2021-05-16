@@ -1,0 +1,37 @@
+//To calculate square's Area,Parameter Using Class
+/*TODO :- 1.Scan the side length
+ * 2. Return the Area and Parameter 
+ */
+import java.util.Scanner;
+
+public class ParameterOfSquare {
+	public static void main(String [] args) {
+//Scanning Length of Side
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Please,Enter a Side");
+		Square sq = new Square();
+		sq.Side = sc.nextInt();
+		System.out.println("Area and Parameter of square are respectively \n"+sq.Area()+"\n"+sq.Parameter());
+		
+		sc.close();
+	}
+        
+}
+
+
+//Creating Class for square
+ class Square{
+	int Side;
+	int Area;
+	int Parameter;
+	
+	int Area() {
+		Area = Side * Side;
+		return Area;
+	}
+	
+	int Parameter() {
+		Parameter = 4*Side;
+		return Parameter;
+	}
+}
