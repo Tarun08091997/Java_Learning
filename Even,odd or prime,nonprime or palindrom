@@ -1,0 +1,68 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int T = sc.nextInt();
+       for(int i=0;i<T;i++){
+           int a= sc.nextInt();
+           int b = sc.nextInt();
+           Test(a,b);
+       }
+    }
+    
+    static void Test(int a ,int b){
+        switch(a){
+            case 1: OddEven(b);
+                    break;
+            case 2: Prime(b);
+                    break;
+            case 3: Palindrome(b);
+                    break;
+            default : break;
+             
+        }
+    }
+    
+    static void OddEven(int b){
+        if(b%2 ==0){
+            System.out.println("EVEN");
+        }
+        else{
+            System.out.println("ODD");
+        }
+    }
+    
+    static void Prime(int b){
+        int count=0;
+        for(int i=2;i<=b/2;i++){
+            if(b%i==0){
+                count++;
+            }
+        }
+        if(count>0){
+            System.out.println("COMPOSITE");
+        }
+        else{
+            System.out.println("PRIME");
+        }
+        
+    }
+    
+    static void Palindrome(int b){
+        int temp=b;
+        int a =0;
+        while(temp>0){
+            a=(temp%10)+(10*a);
+            temp = temp/10;
+        }
+        if(a==b){
+            System.out.println("PALINDROME");
+        }
+        else{
+            System.out.println("NOT PALINDROME");
+        }
+    }
+}
