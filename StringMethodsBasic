@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String first = sc.nextLine();
+        String second = sc.nextLine();
+        System.out.println(first.length()+second.length());
+        int a = first.compareTo(second);
+        if(a>0)
+             System.out.println("Yes");
+        else
+             System.out.println("No");
+             
+        System.out.println(Titlecase(first)+" "+Titlecase(second));
+        sc.close();
+    }
+    static String Titlecase(String a){
+        String b = (a.substring(0,1)).toUpperCase();
+        String c = (a.substring(1)).toLowerCase();
+        return b+c;
+    }
+}
