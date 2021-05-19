@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc =new Scanner(System.in);
+       String s = sc.nextLine();
+       int k = sc.nextInt();
+       String greatest = s.substring(0,k);
+       String smallest = s.substring(0,k);
+       sc.close();
+       
+       for(int i=1;i+k<= s.length();i++){
+           String substring = s.substring(i,i+k);
+           if(greatest.compareTo(substring)<0)
+                 greatest = substring;
+            
+            if(smallest.compareTo(substring)>0)
+                smallest = substring;
+       }
+       System.out.println(smallest+"\n"+greatest);
+    }
+}
