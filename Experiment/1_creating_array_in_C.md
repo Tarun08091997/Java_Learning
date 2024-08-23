@@ -3,6 +3,8 @@
 #include <stdlib.h>
 
 int main() {
+
+
     int a = 50;
     int *add = &a;
     printf("%p \n",add);
