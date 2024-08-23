@@ -5,10 +5,10 @@
 int main() {
 
 
-    int a = 50;
-    int *add = &a;
-    printf("%p \n",add);
-    printf("%d \n",*add);
+    int a = 50;           // Created a int type vlaue
+    int *add = &a;        // Get its address
+    printf("%p \n",add);   // printed Address
+    printf("%d \n",*add);     // printed value at address
     
     int n = 10;
     int *arr =  (int*)malloc(n * sizeof(int));
